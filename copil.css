@@ -1,0 +1,96 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #ff5f6d, #ffc371);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    animation: backgroundAnimation 10s infinite alternate;
+}
+
+@keyframes backgroundAnimation {
+    0% { background: linear-gradient(to right, #ff5f6d, #ffc371); }
+    50% { background: linear-gradient(to right, #ff7e5f, #feb47b); }
+    100% { background: linear-gradient(to right, #ff5f6d, #ffc371); }
+}
+
+.login-container {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.login-box h1 {
+    margin: 0 0 20px;
+    font-size: 2rem;
+    color: #333;
+    animation: textGlow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes textGlow {
+    from { text-shadow: 0 0 10px #ff7e5f; }
+    to { text-shadow: 0 0 20px #feb47b; }
+}
+
+.login-box form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-box form label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.login-box form input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.cta-button {
+    background-color: #ff6347;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    animation: buttonBounce 2s infinite alternate;
+}
+
+.cta-button:hover {
+    background-color: #e5533d;
+    transform: scale(1.05);
+}
+
+@keyframes buttonBounce {
+    from { transform: translateY(0); }
+    to { transform: translateY(-10px); }
+}
+
+.login-box p {
+    margin-top: 10px;
+}
+
+.login-box p a {
+    color: #ff6347;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-box p a:hover {
+    text-decoration: underline;
+}
+
